@@ -90,14 +90,14 @@ namespace Ae.WifiAnalyser
                     var bssNetwork = bssNetworkPair.Item2;
                     var lastSeen = DateTime.Now - bssNetworkPair.Item1;
 
-                    if (ImGui.TreeNode(bssNetworkId, $"{bssNetworkId} {bssNetwork?.LinkQuality}% {bssNetwork?.Channel} 802.11{DescribeNetworkSpeed(bssNetwork?.Type)} (seen {(int)lastSeen.TotalSeconds}s ago)"))
+                    if (ImGui.TreeNode(bssNetworkId, $"{bssNetworkId} {bssNetwork?.LinkQuality}% {bssNetwork?.Channel} 802.11{DescribeNetworkSpeed(bssNetwork?.PhyType)} (seen {(int)lastSeen.TotalSeconds}s ago)"))
                     {
                         ImGui.Text($"BSSID: {bssNetwork?.Bssid}");
                         ImGui.Text($"Frequency: {bssNetwork?.Frequency}KHz");
                         ImGui.Text($"Channel: {bssNetwork?.Channel}");
                         ImGui.Text($"Quality: {bssNetwork?.LinkQuality}%");
                         ImGui.Text($"Signal: {bssNetwork?.SignalStrength}dB");
-                        ImGui.Text($"Type: 802.11{DescribeNetworkSpeed(bssNetwork?.Type)}");
+                        ImGui.Text($"Type: 802.11{DescribeNetworkSpeed(bssNetwork.PhyType)}");
                         ImGui.TreePop();
                     }
                 }

@@ -8,10 +8,7 @@
     <ItemGroup>
         <PackageReference Include="Ae.ImGuiBootstrapper" Version="0.0.10" />
         <PackageReference Include="Humanizer.Core" Version="2.11.10" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\ManagedNativeWifi\Source\ManagedNativeWifi\ManagedNativeWifi.csproj" />
+        <PackageReference Include="ManagedNativeWifi" Version="2.2.0" />
     </ItemGroup>
 
     <ItemGroup>

@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{21C8FCE4-67A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ae.WifiAnalyser", "src\Ae.WifiAnalyser\Ae.WifiAnalyser.csproj", "{473D97F6-6C81-4DA5-8194-252BA1A66346}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagedNativeWifi", "..\ManagedNativeWifi\Source\ManagedNativeWifi\ManagedNativeWifi.csproj", "{237CCAC8-2095-4A15-B259-0A19B0F72C19}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,17 +17,12 @@ Global
 		{473D97F6-6C81-4DA5-8194-252BA1A66346}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{473D97F6-6C81-4DA5-8194-252BA1A66346}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{473D97F6-6C81-4DA5-8194-252BA1A66346}.Release|Any CPU.Build.0 = Release|Any CPU
-		{237CCAC8-2095-4A15-B259-0A19B0F72C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{237CCAC8-2095-4A15-B259-0A19B0F72C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{237CCAC8-2095-4A15-B259-0A19B0F72C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{237CCAC8-2095-4A15-B259-0A19B0F72C19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{473D97F6-6C81-4DA5-8194-252BA1A66346} = {21C8FCE4-67A5-4B3B-913F-698A66A88DEB}
-		{237CCAC8-2095-4A15-B259-0A19B0F72C19} = {21C8FCE4-67A5-4B3B-913F-698A66A88DEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {856FB490-D6F0-4856-BE0D-7B4AF6336680}
