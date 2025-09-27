@@ -90,33 +90,20 @@ namespace Ae.WifiAnalyser
                     var bssNetwork = bssNetworkPair.Item2;
                     var lastSeen = DateTime.Now - bssNetworkPair.Item1;
 
-                    if (ImGui.TreeNode(bssNetworkId, $"{bssNetworkId} {bssNetwork?.LinkQuality}% {bssNetwork?.Channel} 802.11{DescribeNetworkSpeed(bssNetwork?.PhyType)} (seen {(int)lastSeen.TotalSeconds}s ago)"))
+                    if (ImGui.TreeNode(bssNetworkId, $"{bssNetworkId} {bssNetwork?.LinkQuality}% {bssNetwork?.Channel} 802.11{bssNetwork?.PhyType.ToProtocolName()} (seen {(int)lastSeen.TotalSeconds}s ago)"))
                     {
                         ImGui.Text($"BSSID: {bssNetwork?.Bssid}");
                         ImGui.Text($"Frequency: {bssNetwork?.Frequency}KHz");
                         ImGui.Text($"Channel: {bssNetwork?.Channel}");
                         ImGui.Text($"Quality: {bssNetwork?.LinkQuality}%");
-                        ImGui.Text($"Signal: {bssNetwork?.SignalStrength}dB");
-                        ImGui.Text($"Type: 802.11{DescribeNetworkSpeed(bssNetwork.PhyType)}");
+                        ImGui.Text($"Signal: {bssNetwork?.Rssi}dBm");
+                        ImGui.Text($"Type: 802.11{bssNetwork.PhyType.ToProtocolName()}");
                         ImGui.TreePop();
                     }
                 }
 
                 ImGui.End();
             }
-        }
-
-        private static string DescribeNetworkSpeed(PhyType? type)
-        {
-            return type switch
-            {
-                PhyType.Ofdm => "a",
-                PhyType.HrDsss => "b",
-                PhyType.Erp => "g",
-                PhyType.Ht => "n",
-                PhyType.Vht => "ac",
-                _ => "?",
-            };
         }
     }
 }
